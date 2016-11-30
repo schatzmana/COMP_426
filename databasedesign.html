@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Design and Server Side API</title>
+    <link rel="stylesheet" type="text/css" href="a1-recipe.css" />
+</head>
+<body>
+    
+    <pre>
+Categories
+	CategoryID : INT, primary key
+	CategoryName : VARCHAR(30), name of Category e.g.('Furniture', 'Sublease', 'Clothes', 'Textbooks', 'Tutoring', 'Other')
+	
+Posts
+	PostID : INT, primary key
+	Description : VARCHAR(30), description of item being sold
+	Price : INT, price of item being sold
+    PhoneNumber : VARCHAR(30), Phone number to contact person selling item
+    Picture : VARCHAR(30), url to picture of item being sold
+    CategoryID : INT, foreign key to categories table, indicates which category the item is in
+    UserID : INT, foreign key to user table, indicates which user the post belongs to
+    
+	
+Users
+	UserID : INT, primary key
+	Username : VARCHAR(30), username of person selling item
+    Password : VARCHAR(30), password of person selling item
+
+    
+    </pre>
+</body>
+</html>
