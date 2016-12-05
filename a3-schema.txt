@@ -1,0 +1,35 @@
+Courses
+	CourseID : INT, primary key
+	CourseName : VARCHAR(30), name of Course e.g.('COMP 401')
+	Section : INT, indicates section number of course
+	ProfesorID : INT, foreign key to Professors table
+	
+StudentCourse
+	SCID : INT, primary key
+	StudentID : INT, foreign key to Students table
+	CourseID : INT, foreign key to Courses table
+	
+Students
+	StudentID : INT, primary key
+	StudentFirstName : VARCHAR(30), first name of student
+	StudentLastName : VARCHAR(30), last name of student
+
+Professors
+	ProfessorID : INT, primary key
+	ProfessorFirstName : VARCHAR(30), first name of professor
+	ProfessorLastName : VARCHAR(30), last name of professor
+
+Semester
+	SemesterID : INT, primary key
+	SeasonYear : VARCHAR, indicates which season and year the course is being offered e.g.('S14')
+
+CourseSemester
+	CSID : INT, primary key
+	CourseID : INT, foreign key to Courses table
+	SemesterID : INT, foreign key to Semester table
+	ExamDate : VARCHAR(30), String that contains the date of the exam
+
+ProfessorSemester
+	PSID : INT, primary key
+	ProfessorID : INT, foreign key to Professors table
+	SemesterID : INT, foreign key to Semester table

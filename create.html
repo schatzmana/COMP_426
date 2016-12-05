@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Create a Post</title>
-    <link rel="stylesheet" type="text/css" href="home.css" />
+<!--    <link rel="stylesheet" type="text/css" href="home.css" />-->
+    <script src="http://wwwp.cs.unc.edu/Courses/comp426-f16/jquery-3.1.0.js"></script>
+    <script src="create.js"></script>
+    <script src="Post.js"></script>
 </head>
 
 <body>
   <h1>Carolina "Craigslist" logo</h1>
   <h2>Create a Post</h2>
+<form id="new_todo_form">
+    Title: <input name = "title" type="text" id="title"></input>
+  Category:    
+<input type="radio" name="category" value="Furniture"> Furniture
+<input type="radio" name="category" value="Sublease"> Sublease
+<input type="radio" name="category" value="Textbook"> Textbook
+<input type="radio" name="category" value="Tutoring"> Tutoring
+<input type="radio" name="category" value="Clothing"> Clothing
+<input type="radio" name="category" value="Other"> Other
 
-  Category:
-  <select>
-    <option value="furniture">Furniture</option>
-    <option value="sublease">Sublease</option>
-    <option value="textbook">Textbook</option>
-    <option value="tutoring">Tutoring</option>
-    <option value="clothing">Clothing</option>
-    <option value="other">Other</option>
-  </select>
+  Price: ($)<input name = "price" type="text" id="price"></input>
 
-  Location:<input type="text" id="location"></input>
+  Description:<input name = "description" type="text" id="description"></input>
 
-  Price: ($)<input type="text" id="price"></input>
+  Phone Number:<input name = "phonenumber" type="text" id="description"></input>
+  
+  Username:<input name = "username" type="text" id="description"></input>
 
-  Description:<input type="text" id="description"></input>
+  Upload img link here: <input name = "imagelink" type="text" id="description"></input>
 
-  Upload img link here: {put in upload box/link thing}
 
-  <button >Submit</button>
+
+  <button type = submit >Submit</button>
+
+ </form>
 </body>
 
 </html>
 
-// 
