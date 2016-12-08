@@ -9,8 +9,9 @@ img {
 }
 
 table {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
 }
 
 h1 {
@@ -25,4 +26,8 @@ h3 {
 
 h4 {
   text-align: center;
+}
+
+#extraPageLength {
+  height: 300px;
 }
