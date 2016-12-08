@@ -25,7 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
     //Generate JSON encoding of new Todo
     header("Content-type: application/json");
-    print($new_post->getJSON());
+    echo($new_post);
+    
     exit();
 }
 

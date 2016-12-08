@@ -44,7 +44,9 @@ class postsorm
      
     if ($result) {
       $id = $mysqli->insert_id;
-      return new postsorm($id, $title, $description, $price, $phonenumber, $imagelink, $category, $username);
+    
+        return $id;
+      //return new postsorm($id, $title, $description, $price, $phonenumber, $imagelink, $category, $username);
     }
     return null;
   
