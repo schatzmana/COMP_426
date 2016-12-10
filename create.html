@@ -11,35 +11,55 @@
 
 <body>
   <h1>Carolina "Craigslist" logo</h1>
-  <a href="home.html" id="home">Home</a>
-  <a href="create.html" id="create">Create</a>
-  <a href="www.heelmail.unc.edu" id="logout">Logout</a> <!-- end session and send to login page -->
+
+  <div id="nav">
+    <a href="home.html" id="home">Home</a>
+    <a href="create.html" id="create">Create</a>
+    <a href="www.heelmail.unc.edu" id="logout">Logout</a> <!-- end session and send to login page -->
+  </div>
+
   <h2>Create a Post</h2>
-<form id="new_todo_form">
+
+  <form id="new_todo_form">
     Title: <input name = "title" type="text" id="title"></input>
-  Category:
-<input type="radio" name="category" value="Furniture"> Furniture
-<input type="radio" name="category" value="Sublease"> Sublease
-<input type="radio" name="category" value="Textbook"> Textbook
-<input type="radio" name="category" value="Tutoring"> Tutoring
-<input type="radio" name="category" value="Clothing"> Clothing
-<input type="radio" name="category" value="Other"> Other
+    <br>
+    Category:
+    <select name="category">
+      <option name="category" value="Furniture"> Furniture</option>
+      <option name="category" value="Clothing"> Clothing</option>
+      <option name="category" value="Sublease"> Sublease</option>
+      <option name="category" value="Tutoring"> Tutoring</option>
+      <option name="category" value="Textbook"> Textbook</option>
+      <option name="category" value="Other"> Other</option>
+    </select>
 
-  Price: ($)<input name = "price" type="text" id="price"></input>
+    <!-- Pranavi had it like this before, with radio buttons.
+    I changed to select drop down, just maintaining previous in case we need it:
 
-  Description:<input name = "description" type="text" id="description"></input>
+    Category:
+    <input type="radio" name="category" value="Furniture"> Furniture
+    <input type="radio" name="category" value="Sublease"> Sublease
+    <input type="radio" name="category" value="Textbook"> Textbook
+    <input type="radio" name="category" value="Tutoring"> Tutoring
+    <input type="radio" name="category" value="Clothing"> Clothing
+    <input type="radio" name="category" value="Other"> Other
 
-  Phone Number:<input name = "phonenumber" type="text" id="description"></input>
+    -->
 
-  Username:<input name = "username" type="text" id="description"></input>
-
-  Upload img link here: <input name = "imagelink" type="text" id="description"></input>
-
-
-
-  <button type = submit >Submit</button>
-
+    <br>
+    Price: ($)<input name = "price" type="text" id="price"></input>
+    <br>
+    Description:<input name = "description" type="text" id="description"></input>
+    <br>
+    Phone Number:<input name = "phonenumber" type="text" id="description"></input>
+    <br>
+    Username:<input name = "username" type="text" id="description"></input>
+    <br>
+    Upload img link here: <input name = "imagelink" type="text" id="description"></input>
+    <br>
+    <button type = submit >Submit</button>
  </form>
+
 </body>
 
 </html>

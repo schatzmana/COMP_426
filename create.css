@@ -14,26 +14,27 @@ h1 {
   padding: 20px;
 }
 
+#nav {
+  float: right;
+  padding-right: 10px;
+}
+
 #home {
   color: #ffffff;
 }
 
 #home:hover {
-  color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #create {
   border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 5px;
-  align: right;
   color: #ffffff;
   text-decoration: none;
-}
-
-#create:hover{
-  border-color: #000000;
-  color: #000000;
 }
 
 #logout {
@@ -41,9 +42,15 @@ h1 {
 }
 
 #logout:hover {
-  color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 a {
   text-decoration: none;
+}
+
+#title {
+  width: 40%;
 }
