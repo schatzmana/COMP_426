@@ -46,7 +46,7 @@
 <font face="Arial, Helvetica, sans-serif"><?php echo $user_name; ?></font>
 </td>
 <td>
-<font face="Arial, Helvetica, sans-serif"><?php echo $picture; ?></font>
+<font face="Arial, Helvetica, sans-serif"><img src="<?php echo $picture; ?>"></font>
 </td>
 </tr>
 </body>

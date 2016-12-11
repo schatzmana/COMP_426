@@ -1,9 +1,11 @@
 <?php
 
 
-$category = $_GET['category'];
+session_start();
+$myusername = $_SESSION['username'];
+
 ?>
-<h1><?php echo "".$category."" ?></h1>
+<h1><?php echo "Posts by:".$myusername."" ?></h1>
 
 <?php
 $servername = "classroom.cs.unc.edu";
@@ -20,15 +22,15 @@ if ($conn->connect_error) {
 } 
 echo "Connected successfully";
 
- $sql = "SELECT CategoryID FROM Categories WHERE CategoryName = '".$category ."'";
+ $sql = "SELECT UserID FROM Users WHERE Username = '".$myusername ."'";
     
      $result = $conn->query($sql);
-$categoryid;
+$userid;
     while($row = $result->fetch_assoc()) {
         //echo "id: " . $row["StudentID"]."";
-        $categoryid = $row["CategoryID"];
+        $userid = $row["UserID"];
     }
- $sql = "SELECT * FROM Posts p WHERE p.CategoryID =".$categoryid;
+ $sql = "SELECT * FROM Posts p WHERE p.UserID =".$userid;
     echo "I made it here";
      $result = $conn->query($sql);
 
@@ -39,7 +41,7 @@ if ($result->num_rows > 0): ?>
         <td>Description</td>
         <td>Price</td>
         <td>Phone Number</td>
-        <td>Username</td>
+        <td>Category</td>
         <td>Picture</td>
         
     </tr>
@@ -51,16 +53,16 @@ if ($result->num_rows > 0): ?>
         <td><?php echo "" . $row["Price"].""; ?></td>
         <td><?php echo "" . $row["PhoneNumber"].""; ?></td>
         <td><?php 
-             $picture = $row["Picture"];
-             $userID = $row["UserID"];
-             $sql = "SELECT UserName FROM Users WHERE UserID = '".$userID ."'";
-    $user_name;
-     $userresult = $conn->query($sql);
-        while($row = $userresult->fetch_assoc()) {
-        $user_name = $row["UserName"];
+            $picture = $row["Picture"];
+             $categoryID = $row["CategoryID"];
+             $sql = "SELECT CategoryName FROM Categories WHERE CategoryID = '".$categoryID ."'";
+    $category_name;
+     $catresult = $conn->query($sql);
+        while($row = $catresult->fetch_assoc()) {
+        $category_name = $row["CategoryName"];
     }
-        echo "" . $user_name.""; ?></td>
-        <td><img src="<?php echo "" . $picture.""; ?>"></td>
+        echo "" . $category_name.""; ?></td>
+        <td><img src="<?php print ("" . $picture."")?>"></td>
         
     </tr>
     <?php endwhile; ?>
