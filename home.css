@@ -4,6 +4,10 @@ body {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
 }
 
+#logo {
+  height: 75px;
+}
+
 h1 {
   border-bottom: 3px double #000;
   text-align: center;
@@ -17,7 +21,6 @@ h1 {
 
 #home {
   text-align: center;
-  padding-right: 15px;
   border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 5px;
@@ -27,12 +30,10 @@ h1 {
 
 #create {
   color: #ffffff;
-  padding-left: 15px;
 }
 
 #create:hover {
   text-align: center;
-  padding-left: 15px;
   border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 5px;
@@ -40,7 +41,6 @@ h1 {
 
 #logout {
   color: #ffffff;
-  padding-left: 15px;
 }
 
 #logout:hover {
@@ -64,7 +64,7 @@ table {
   margin-top: 35px;
 }
 
-img {
+img:not(#logo) {
   height: 250px;
   border: 2px solid #000;
   border-radius: 25px;
