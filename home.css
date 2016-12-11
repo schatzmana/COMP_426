@@ -9,14 +9,15 @@ body {
 }
 
 h1 {
-  border-bottom: 3px double #000;
-  text-align: center;
-  padding: 20px;
+
 }
 
 #nav {
-  float: right;
   padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 3px double #000;
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 #home {
@@ -26,6 +27,17 @@ h1 {
   padding: 5px;
   color: #ffffff;
   text-decoration: none;
+}
+
+#view {
+  color: #ffffff;
+}
+
+#view:hover {
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #create {
@@ -55,16 +67,17 @@ a {
 }
 
 #welcome {
-  float: center;
+  text-align: center;
+  padding-top: 25px;
 }
 
 table {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
-img:not(#logo) {
+img:not(#logo, #cc) {
   height: 250px;
   border: 2px solid #000;
   border-radius: 25px;
