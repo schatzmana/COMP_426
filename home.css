@@ -77,7 +77,7 @@ table {
   margin-top: 25px;
 }
 
-img:not(#logo, #cc) {
+img {
   height: 250px;
   border: 2px solid #000;
   border-radius: 25px;
