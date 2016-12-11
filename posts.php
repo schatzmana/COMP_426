@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once('postsorm.php');
 
 $path_components = explode('/', $_SERVER['PATH_INFO']);
@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $description = trim($_REQUEST['description']);
     $price = intval($_REQUEST['price']);
     $phonenumber = trim($_REQUEST['phonenumber']);
-    $username =  trim($_REQUEST['username']);
+    $username =  $_SESSION['username'];
     $category = trim($_REQUEST['category']);
     $imagelink = trim($_REQUEST['imagelink']);
  $new_post = postsorm::create($title, $description, $price, $phonenumber, $username, $category, $imagelink);
